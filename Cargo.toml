@@ -1,0 +1,10 @@
+[package]
+name = "tokei-aas"
+version = "0.1.0"
+authors = ["Dylan Frankland <dfrankland@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+juniper = "0.14.0"
+tide = { git = "https://github.com/rustasync/tide", rev = "e77709370bb24cf776fe6da902467c35131535b1" }
+http = "0.1.19"
