@@ -53,11 +53,24 @@ async fn handle_graphql(mut cx: Context<State>) -> EndpointResult {
     };
     let mut resp = response::json(response);
     *resp.status_mut() = status;
+    let headers = resp.headers_mut();
+    headers.insert("Connection", HeaderValue::from_str("keep-alive").unwrap());
+    headers.insert("Access-Control-Allow-Origin", HeaderValue::from_str("*").unwrap());
+    Ok(resp)
+}
+
+async fn handle_cors(mut _cx: Context<State>) -> EndpointResult {
+    let mut resp = response::json("");
+    *resp.status_mut() = StatusCode::NO_CONTENT;
+    let headers = resp.headers_mut();
+    headers.insert("Connection", HeaderValue::from_str("keep-alive").unwrap());
+    headers.insert("Access-Control-Allow-Origin", HeaderValue::from_str("*").unwrap());
+    headers.insert("Access-Control-Allow-Headers", HeaderValue::from_str("*").unwrap());
     Ok(resp)
 }
 
 fn main() {
     let mut app = App::with_state(State::default());
-    app.at("/graphql").post(handle_graphql);
+    app.at("/graphql").post(handle_graphql).options(handle_cors);
     app.run("127.0.0.1:8000").unwrap();
 }
