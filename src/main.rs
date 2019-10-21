@@ -69,8 +69,9 @@ async fn handle_cors(mut _cx: Context<State>) -> EndpointResult {
     Ok(resp)
 }
 
-fn main() {
+#[runtime::main(runtime_tokio::Tokio)]
+async fn main() {
     let mut app = App::with_state(State::default());
     app.at("/graphql").post(handle_graphql).options(handle_cors);
-    app.run("127.0.0.1:8000").unwrap();
+    app.serve("127.0.0.1:8000").await.unwrap()
 }

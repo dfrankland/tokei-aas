@@ -8,3 +8,5 @@ edition = "2018"
 juniper = "0.14.0"
 tide = { git = "https://github.com/rustasync/tide", rev = "e77709370bb24cf776fe6da902467c35131535b1" }
 http = "0.1.19"
+runtime = "0.3.0-alpha.7"
+runtime-tokio = "0.3.0-alpha.6"
