@@ -10,3 +10,4 @@ tide = { git = "https://github.com/rustasync/tide", rev = "e77709370bb24cf776fe6
 http = "0.1.19"
 runtime = "0.3.0-alpha.7"
 runtime-tokio = "0.3.0-alpha.6"
+lazy_static = "1.4.0"

@@ -6,6 +6,7 @@ use http::{status::StatusCode, header::HeaderValue};
 use juniper::graphql_object;
 use std::sync::{atomic, Arc};
 use tide::{error::ResultExt, response, App, Context, EndpointResult};
+use lazy_static::lazy_static;
 
 // First, we define `State` that holds accumulator state. This is accessible as state in
 // Tide, and as executor context in Juniper.
@@ -40,12 +41,15 @@ graphql_object!(Mutation: State |&self| {
 // schema.
 type Schema = juniper::RootNode<'static, Query, Mutation>;
 
+lazy_static! {
+    static ref SCHEMA: Schema = Schema::new(Query, Mutation);
+}
+
 // Finally, we'll bridge between Tide and Juniper. `GraphQLRequest` from Juniper implements
 // `Deserialize`, so we use `Json` extractor to deserialize the request body.
 async fn handle_graphql(mut cx: Context<State>) -> EndpointResult {
     let query: juniper::http::GraphQLRequest = cx.body_json().await.client_err()?;
-    let schema = Schema::new(Query, Mutation);
-    let response = query.execute(&schema, cx.state());
+    let response = query.execute(&SCHEMA, cx.state());
     let status = if response.is_ok() {
         StatusCode::OK
     } else {
