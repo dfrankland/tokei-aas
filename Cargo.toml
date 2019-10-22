@@ -5,9 +5,13 @@ authors = ["Dylan Frankland <dfrankland@users.noreply.github.com>"]
 edition = "2018"
 
 [dependencies]
-juniper = "0.14.0"
+juniper = { git = "https://github.com/graphql-rust/juniper/", branch = "async-await", rev = "c903d5e0046041853375aaf906d590e7d7202d5f", features = ["async"] }
 tide = { git = "https://github.com/rustasync/tide", rev = "e77709370bb24cf776fe6da902467c35131535b1" }
 http = "0.1.19"
 runtime = "0.3.0-alpha.7"
 runtime-tokio = "0.3.0-alpha.6"
 lazy_static = "1.4.0"
+tempdir = "0.3.7"
+tokei = "10.0.1"
+anyhow = "1.0.16"
+futures-preview = "0.3.0-alpha.19"
