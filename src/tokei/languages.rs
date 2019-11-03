@@ -1,4 +1,7 @@
-use tokei::{Languages as TokeiLanguages, LanguageType as TokeiLanguageType, Language as TokeiLanguage, Stats as TokeiStats};
+use tokei::{
+    Language as TokeiLanguage, LanguageType as TokeiLanguageType, Languages as TokeiLanguages,
+    Stats as TokeiStats,
+};
 
 #[derive(Debug, Clone, juniper::GraphQLEnum)]
 pub enum LanguageType {
@@ -572,556 +575,556 @@ impl LanguageMap {
         match language.language_type {
             LanguageType::Abap => {
                 self.abap = Some(language.clone());
-            },
+            }
             LanguageType::ActionScript => {
                 self.action_script = Some(language.clone());
-            },
+            }
             LanguageType::Ada => {
                 self.ada = Some(language.clone());
-            },
+            }
             LanguageType::Agda => {
                 self.agda = Some(language.clone());
-            },
+            }
             LanguageType::Alex => {
                 self.alex = Some(language.clone());
-            },
+            }
             LanguageType::Asn1 => {
                 self.asn1 = Some(language.clone());
-            },
+            }
             LanguageType::Asp => {
                 self.asp = Some(language.clone());
-            },
+            }
             LanguageType::AspNet => {
                 self.asp_net = Some(language.clone());
-            },
+            }
             LanguageType::Assembly => {
                 self.assembly = Some(language.clone());
-            },
+            }
             LanguageType::AutoHotKey => {
                 self.auto_hot_key = Some(language.clone());
-            },
+            }
             LanguageType::Autoconf => {
                 self.autoconf = Some(language.clone());
-            },
+            }
             LanguageType::Automake => {
                 self.automake = Some(language.clone());
-            },
+            }
             LanguageType::Bash => {
                 self.bash = Some(language.clone());
-            },
+            }
             LanguageType::Batch => {
                 self.batch = Some(language.clone());
-            },
+            }
             LanguageType::BrightScript => {
                 self.bright_script = Some(language.clone());
-            },
+            }
             LanguageType::C => {
                 self.c = Some(language.clone());
-            },
+            }
             LanguageType::CHeader => {
                 self.c_header = Some(language.clone());
-            },
+            }
             LanguageType::CMake => {
                 self.c_make = Some(language.clone());
-            },
+            }
             LanguageType::CSharp => {
                 self.c_sharp = Some(language.clone());
-            },
+            }
             LanguageType::CShell => {
                 self.c_shell = Some(language.clone());
-            },
+            }
             LanguageType::Cabal => {
                 self.cabal = Some(language.clone());
-            },
+            }
             LanguageType::Cassius => {
                 self.cassius = Some(language.clone());
-            },
+            }
             LanguageType::Ceylon => {
                 self.ceylon = Some(language.clone());
-            },
+            }
             LanguageType::Clojure => {
                 self.clojure = Some(language.clone());
-            },
+            }
             LanguageType::ClojureC => {
                 self.clojure_c = Some(language.clone());
-            },
+            }
             LanguageType::ClojureScript => {
                 self.clojure_script = Some(language.clone());
-            },
+            }
             LanguageType::Cobol => {
                 self.cobol = Some(language.clone());
-            },
+            }
             LanguageType::CoffeeScript => {
                 self.coffee_script = Some(language.clone());
-            },
+            }
             LanguageType::Cogent => {
                 self.cogent = Some(language.clone());
-            },
+            }
             LanguageType::ColdFusion => {
                 self.cold_fusion = Some(language.clone());
-            },
+            }
             LanguageType::ColdFusionScript => {
                 self.cold_fusion_script = Some(language.clone());
-            },
+            }
             LanguageType::Coq => {
                 self.coq = Some(language.clone());
-            },
+            }
             LanguageType::Cpp => {
                 self.cpp = Some(language.clone());
-            },
+            }
             LanguageType::CppHeader => {
                 self.cpp_header = Some(language.clone());
-            },
+            }
             LanguageType::Crystal => {
                 self.crystal = Some(language.clone());
-            },
+            }
             LanguageType::Css => {
                 self.css = Some(language.clone());
-            },
+            }
             LanguageType::D => {
                 self.d = Some(language.clone());
-            },
+            }
             LanguageType::Dart => {
                 self.dart = Some(language.clone());
-            },
+            }
             LanguageType::DeviceTree => {
                 self.device_tree = Some(language.clone());
-            },
+            }
             LanguageType::Dockerfile => {
                 self.dockerfile = Some(language.clone());
-            },
+            }
             LanguageType::DotNetResource => {
                 self.dot_net_resource = Some(language.clone());
-            },
+            }
             LanguageType::DreamMaker => {
                 self.dream_maker = Some(language.clone());
-            },
+            }
             LanguageType::Edn => {
                 self.edn = Some(language.clone());
-            },
+            }
             LanguageType::Elisp => {
                 self.elisp = Some(language.clone());
-            },
+            }
             LanguageType::Elixir => {
                 self.elixir = Some(language.clone());
-            },
+            }
             LanguageType::Elm => {
                 self.elm = Some(language.clone());
-            },
+            }
             LanguageType::Elvish => {
                 self.elvish = Some(language.clone());
-            },
+            }
             LanguageType::EmacsDevEnv => {
                 self.emacs_dev_env = Some(language.clone());
-            },
+            }
             LanguageType::Erlang => {
                 self.erlang = Some(language.clone());
-            },
+            }
             LanguageType::FEN => {
                 self.fen = Some(language.clone());
-            },
+            }
             LanguageType::FSharp => {
                 self.f_sharp = Some(language.clone());
-            },
+            }
             LanguageType::Fish => {
                 self.fish = Some(language.clone());
-            },
+            }
             LanguageType::Forth => {
                 self.forth = Some(language.clone());
-            },
+            }
             LanguageType::FortranLegacy => {
                 self.fortran_legacy = Some(language.clone());
-            },
+            }
             LanguageType::FortranModern => {
                 self.fortran_modern = Some(language.clone());
-            },
+            }
             LanguageType::Fstar => {
                 self.fstar = Some(language.clone());
-            },
+            }
             LanguageType::GdScript => {
                 self.gd_script = Some(language.clone());
-            },
+            }
             LanguageType::Glsl => {
                 self.glsl = Some(language.clone());
-            },
+            }
             LanguageType::Go => {
                 self.go = Some(language.clone());
-            },
+            }
             LanguageType::Graphql => {
                 self.graphql = Some(language.clone());
-            },
+            }
             LanguageType::Groovy => {
                 self.groovy = Some(language.clone());
-            },
+            }
             LanguageType::Hamlet => {
                 self.hamlet = Some(language.clone());
-            },
+            }
             LanguageType::Handlebars => {
                 self.handlebars = Some(language.clone());
-            },
+            }
             LanguageType::Happy => {
                 self.happy = Some(language.clone());
-            },
+            }
             LanguageType::Haskell => {
                 self.haskell = Some(language.clone());
-            },
+            }
             LanguageType::Haxe => {
                 self.haxe = Some(language.clone());
-            },
+            }
             LanguageType::Hcl => {
                 self.hcl = Some(language.clone());
-            },
+            }
             LanguageType::Hex => {
                 self.hex = Some(language.clone());
-            },
+            }
             LanguageType::Hlsl => {
                 self.hlsl = Some(language.clone());
-            },
+            }
             LanguageType::Html => {
                 self.html = Some(language.clone());
-            },
+            }
             LanguageType::Idris => {
                 self.idris = Some(language.clone());
-            },
+            }
             LanguageType::Ini => {
                 self.ini = Some(language.clone());
-            },
+            }
             LanguageType::IntelHex => {
                 self.intel_hex = Some(language.clone());
-            },
+            }
             LanguageType::Isabelle => {
                 self.isabelle = Some(language.clone());
-            },
+            }
             LanguageType::Jai => {
                 self.jai = Some(language.clone());
-            },
+            }
             LanguageType::Java => {
                 self.java = Some(language.clone());
-            },
+            }
             LanguageType::JavaScript => {
                 self.java_script = Some(language.clone());
-            },
+            }
             LanguageType::Json => {
                 self.json = Some(language.clone());
-            },
+            }
             LanguageType::Jsx => {
                 self.jsx = Some(language.clone());
-            },
+            }
             LanguageType::Julia => {
                 self.julia = Some(language.clone());
-            },
+            }
             LanguageType::Julius => {
                 self.julius = Some(language.clone());
-            },
+            }
             LanguageType::KakouneScript => {
                 self.kakoune_script = Some(language.clone());
-            },
+            }
             LanguageType::Kotlin => {
                 self.kotlin = Some(language.clone());
-            },
+            }
             LanguageType::LLVM => {
                 self.llvm = Some(language.clone());
-            },
+            }
             LanguageType::Lean => {
                 self.lean = Some(language.clone());
-            },
+            }
             LanguageType::Less => {
                 self.less = Some(language.clone());
-            },
+            }
             LanguageType::LinkerScript => {
                 self.linker_script = Some(language.clone());
-            },
+            }
             LanguageType::Liquid => {
                 self.liquid = Some(language.clone());
-            },
+            }
             LanguageType::Lisp => {
                 self.lisp = Some(language.clone());
-            },
+            }
             LanguageType::Logtalk => {
                 self.logtalk = Some(language.clone());
-            },
+            }
             LanguageType::Lua => {
                 self.lua = Some(language.clone());
-            },
+            }
             LanguageType::Lucius => {
                 self.lucius = Some(language.clone());
-            },
+            }
             LanguageType::Madlang => {
                 self.madlang = Some(language.clone());
-            },
+            }
             LanguageType::Makefile => {
                 self.makefile = Some(language.clone());
-            },
+            }
             LanguageType::Markdown => {
                 self.markdown = Some(language.clone());
-            },
+            }
             LanguageType::Meson => {
                 self.meson = Some(language.clone());
-            },
+            }
             LanguageType::Mint => {
                 self.mint = Some(language.clone());
-            },
+            }
             LanguageType::ModuleDef => {
                 self.module_def = Some(language.clone());
-            },
+            }
             LanguageType::MsBuild => {
                 self.ms_build = Some(language.clone());
-            },
+            }
             LanguageType::Mustache => {
                 self.mustache = Some(language.clone());
-            },
+            }
             LanguageType::Nim => {
                 self.nim = Some(language.clone());
-            },
+            }
             LanguageType::Nix => {
                 self.nix = Some(language.clone());
-            },
+            }
             LanguageType::NotQuitePerl => {
                 self.not_quite_perl = Some(language.clone());
-            },
+            }
             LanguageType::OCaml => {
                 self.o_caml = Some(language.clone());
-            },
+            }
             LanguageType::ObjectiveC => {
                 self.objective_c = Some(language.clone());
-            },
+            }
             LanguageType::ObjectiveCpp => {
                 self.objective_cpp = Some(language.clone());
-            },
+            }
             LanguageType::Org => {
                 self.org = Some(language.clone());
-            },
+            }
             LanguageType::Oz => {
                 self.oz = Some(language.clone());
-            },
+            }
             LanguageType::PSL => {
                 self.psl = Some(language.clone());
-            },
+            }
             LanguageType::Pascal => {
                 self.pascal = Some(language.clone());
-            },
+            }
             LanguageType::Perl => {
                 self.perl = Some(language.clone());
-            },
+            }
             LanguageType::Perl6 => {
                 self.perl6 = Some(language.clone());
-            },
+            }
             LanguageType::Pest => {
                 self.pest = Some(language.clone());
-            },
+            }
             LanguageType::Php => {
                 self.php = Some(language.clone());
-            },
+            }
             LanguageType::Polly => {
                 self.polly = Some(language.clone());
-            },
+            }
             LanguageType::Pony => {
                 self.pony = Some(language.clone());
-            },
+            }
             LanguageType::PostCss => {
                 self.post_css = Some(language.clone());
-            },
+            }
             LanguageType::Processing => {
                 self.processing = Some(language.clone());
-            },
+            }
             LanguageType::Prolog => {
                 self.prolog = Some(language.clone());
-            },
+            }
             LanguageType::Protobuf => {
                 self.protobuf = Some(language.clone());
-            },
+            }
             LanguageType::PureScript => {
                 self.pure_script = Some(language.clone());
-            },
+            }
             LanguageType::Python => {
                 self.python = Some(language.clone());
-            },
+            }
             LanguageType::Qcl => {
                 self.qcl = Some(language.clone());
-            },
+            }
             LanguageType::Qml => {
                 self.qml = Some(language.clone());
-            },
+            }
             LanguageType::R => {
                 self.r = Some(language.clone());
-            },
+            }
             LanguageType::RPMSpecfile => {
                 self.rpm_specfile = Some(language.clone());
-            },
+            }
             LanguageType::Racket => {
                 self.racket = Some(language.clone());
-            },
+            }
             LanguageType::Rakefile => {
                 self.rakefile = Some(language.clone());
-            },
+            }
             LanguageType::Razor => {
                 self.razor = Some(language.clone());
-            },
+            }
             LanguageType::ReStructuredText => {
                 self.re_structured_text = Some(language.clone());
-            },
+            }
             LanguageType::Ruby => {
                 self.ruby = Some(language.clone());
-            },
+            }
             LanguageType::RubyHtml => {
                 self.ruby_html = Some(language.clone());
-            },
+            }
             LanguageType::Rust => {
                 self.rust = Some(language.clone());
-            },
+            }
             LanguageType::SRecode => {
                 self.s_recode = Some(language.clone());
-            },
+            }
             LanguageType::Sass => {
                 self.sass = Some(language.clone());
-            },
+            }
             LanguageType::Scala => {
                 self.scala = Some(language.clone());
-            },
+            }
             LanguageType::Scheme => {
                 self.scheme = Some(language.clone());
-            },
+            }
             LanguageType::Scons => {
                 self.scons = Some(language.clone());
-            },
+            }
             LanguageType::Sh => {
                 self.sh = Some(language.clone());
-            },
+            }
             LanguageType::Sml => {
                 self.sml = Some(language.clone());
-            },
+            }
             LanguageType::Solidity => {
                 self.solidity = Some(language.clone());
-            },
+            }
             LanguageType::SpecmanE => {
                 self.specman_e = Some(language.clone());
-            },
+            }
             LanguageType::Spice => {
                 self.spice = Some(language.clone());
-            },
+            }
             LanguageType::Sql => {
                 self.sql = Some(language.clone());
-            },
+            }
             LanguageType::Stratego => {
                 self.stratego = Some(language.clone());
-            },
+            }
             LanguageType::Svg => {
                 self.svg = Some(language.clone());
-            },
+            }
             LanguageType::Swift => {
                 self.swift = Some(language.clone());
-            },
+            }
             LanguageType::Swig => {
                 self.swig = Some(language.clone());
-            },
+            }
             LanguageType::SystemVerilog => {
                 self.system_verilog = Some(language.clone());
-            },
+            }
             LanguageType::Tcl => {
                 self.tcl = Some(language.clone());
-            },
+            }
             LanguageType::Tex => {
                 self.tex = Some(language.clone());
-            },
+            }
             LanguageType::Text => {
                 self.text = Some(language.clone());
-            },
+            }
             LanguageType::Toml => {
                 self.toml = Some(language.clone());
-            },
+            }
             LanguageType::Twig => {
                 self.twig = Some(language.clone());
-            },
+            }
             LanguageType::TypeScript => {
                 self.type_script = Some(language.clone());
-            },
+            }
             LanguageType::UnrealDeveloperMarkdown => {
                 self.unreal_developer_markdown = Some(language.clone());
-            },
+            }
             LanguageType::UnrealPlugin => {
                 self.unreal_plugin = Some(language.clone());
-            },
+            }
             LanguageType::UnrealProject => {
                 self.unreal_project = Some(language.clone());
-            },
+            }
             LanguageType::UnrealScript => {
                 self.unreal_script = Some(language.clone());
-            },
+            }
             LanguageType::UnrealShader => {
                 self.unreal_shader = Some(language.clone());
-            },
+            }
             LanguageType::UnrealShaderHeader => {
                 self.unreal_shader_header = Some(language.clone());
-            },
+            }
             LanguageType::UrWeb => {
                 self.ur_web = Some(language.clone());
-            },
+            }
             LanguageType::UrWebProject => {
                 self.ur_web_project = Some(language.clone());
-            },
+            }
             LanguageType::VB6 => {
                 self.vb6 = Some(language.clone());
-            },
+            }
             LanguageType::VBScript => {
                 self.vb_script = Some(language.clone());
-            },
+            }
             LanguageType::Vala => {
                 self.vala = Some(language.clone());
-            },
+            }
             LanguageType::Verilog => {
                 self.verilog = Some(language.clone());
-            },
+            }
             LanguageType::VerilogArgsFile => {
                 self.verilog_args_file = Some(language.clone());
-            },
+            }
             LanguageType::Vhdl => {
                 self.vhdl = Some(language.clone());
-            },
+            }
             LanguageType::VimScript => {
                 self.vim_script = Some(language.clone());
-            },
+            }
             LanguageType::VisualBasic => {
                 self.visual_basic = Some(language.clone());
-            },
+            }
             LanguageType::VisualStudioProject => {
                 self.visual_studio_project = Some(language.clone());
-            },
+            }
             LanguageType::VisualStudioSolution => {
                 self.visual_studio_solution = Some(language.clone());
-            },
+            }
             LanguageType::Vue => {
                 self.vue = Some(language.clone());
-            },
+            }
             LanguageType::WebAssembly => {
                 self.web_assembly = Some(language.clone());
-            },
+            }
             LanguageType::Wolfram => {
                 self.wolfram = Some(language.clone());
-            },
+            }
             LanguageType::XSL => {
                 self.xsl = Some(language.clone());
-            },
+            }
             LanguageType::Xaml => {
                 self.xaml = Some(language.clone());
-            },
+            }
             LanguageType::XcodeConfig => {
                 self.xcode_config = Some(language.clone());
-            },
+            }
             LanguageType::Xml => {
                 self.xml = Some(language.clone());
-            },
+            }
             LanguageType::Xtend => {
                 self.xtend = Some(language.clone());
-            },
+            }
             LanguageType::Yaml => {
                 self.yaml = Some(language.clone());
-            },
+            }
             LanguageType::Zig => {
                 self.zig = Some(language.clone());
-            },
+            }
             LanguageType::Zsh => {
                 self.zsh = Some(language.clone());
-            },
+            }
         }
     }
 }
@@ -1192,8 +1195,5 @@ pub fn convert(tokei_languages: TokeiLanguages) -> Languages {
         list.push(language);
     }
 
-    Languages {
-        list,
-        map,
-    }
+    Languages { list, map }
 }
