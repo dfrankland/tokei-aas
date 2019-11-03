@@ -1,11 +1,11 @@
-mod state;
-mod query;
 mod mutation;
+mod query;
+mod state;
 
-use lazy_static::lazy_static;
-pub use self::state::State;
-pub use self::query::Query;
 pub use self::mutation::Mutation;
+pub use self::query::Query;
+pub use self::state::State;
+use lazy_static::lazy_static;
 
 pub type Schema = juniper::RootNode<'static, Query, Mutation>;
 

@@ -1,5 +1,5 @@
-use crate::tokei::{tokei, Languages};
 use super::state::State;
+use crate::tokei::{tokei, Languages};
 use juniper::FieldResult;
 use std::sync::atomic;
 
@@ -11,7 +11,11 @@ impl Mutation {
         context.0.fetch_add(by as isize, atomic::Ordering::Relaxed) as i32 + by
     }
 
-    async fn tokei(repo: String, paths: Option<Vec<String>>, ignored: Option<Vec<String>>) -> FieldResult<Languages> {
+    async fn tokei(
+        repo: String,
+        paths: Option<Vec<String>>,
+        ignored: Option<Vec<String>>,
+    ) -> FieldResult<Languages> {
         Ok(tokei(repo, paths, ignored).await?)
     }
 }

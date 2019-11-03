@@ -1,8 +1,8 @@
 mod schema;
 mod tokei;
 
-use self::schema::{SCHEMA, State};
-use http::{status::StatusCode, header::HeaderValue};
+use self::schema::{State, SCHEMA};
+use http::{header::HeaderValue, status::StatusCode};
 use tide::{error::ResultExt, App, Context, EndpointResult};
 
 async fn handle_graphql(mut cx: Context<State>) -> EndpointResult {
@@ -18,7 +18,10 @@ async fn handle_graphql(mut cx: Context<State>) -> EndpointResult {
     *response.status_mut() = status;
     let headers = response.headers_mut();
     headers.insert("Connection", HeaderValue::from_str("keep-alive").unwrap());
-    headers.insert("Access-Control-Allow-Origin", HeaderValue::from_str("*").unwrap());
+    headers.insert(
+        "Access-Control-Allow-Origin",
+        HeaderValue::from_str("*").unwrap(),
+    );
     Ok(response)
 }
 
@@ -27,8 +30,14 @@ async fn handle_cors(mut _cx: Context<State>) -> EndpointResult {
     *response.status_mut() = StatusCode::NO_CONTENT;
     let headers = response.headers_mut();
     headers.insert("Connection", HeaderValue::from_str("keep-alive").unwrap());
-    headers.insert("Access-Control-Allow-Origin", HeaderValue::from_str("*").unwrap());
-    headers.insert("Access-Control-Allow-Headers", HeaderValue::from_str("*").unwrap());
+    headers.insert(
+        "Access-Control-Allow-Origin",
+        HeaderValue::from_str("*").unwrap(),
+    );
+    headers.insert(
+        "Access-Control-Allow-Headers",
+        HeaderValue::from_str("*").unwrap(),
+    );
     Ok(response)
 }
 
