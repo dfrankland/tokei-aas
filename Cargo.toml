@@ -7,7 +7,7 @@ edition = "2018"
 [dependencies]
 juniper = { git = "https://github.com/graphql-rust/juniper/", branch = "async-await", rev = "c903d5e0046041853375aaf906d590e7d7202d5f", features = ["async"] }
 tide = { git = "https://github.com/rustasync/tide", rev = "e77709370bb24cf776fe6da902467c35131535b1" }
-http = "0.1.19"
+http = "0.2.0"
 runtime = "0.3.0-alpha.7"
 runtime-tokio = "0.3.0-alpha.6"
 lazy_static = "1.4.0"
